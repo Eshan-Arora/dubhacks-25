@@ -1,0 +1,58 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Build output
+/dist
+/build
+/.next
+
+# Temporary files
+*.swp
+*.swo
+
+# VS Code settings
+.vscode/
+
+# Dependency directories
+/pnpm-lock.yaml
+/package-lock.json
+/yarn.lock
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Coverage directory for code coverage reports
+coverage/
+
+# Optional: Ignore any compiled files (e.g., TypeScript or Babel output)
+*.tsbuildinfo
+*.js.map
+*.d.ts
+
+# Ignore test coverage and test results
+coverage/
+
+# Ignore Docker-related files if you're using Docker
+Dockerfile
+docker-compose.yml
+
+# Ignore any database files (if using SQLite, etc.)
+*.sqlite
+*.db
+
+# Ignore any IDE or editor specific files
+.idea/
