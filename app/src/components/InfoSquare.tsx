@@ -7,13 +7,13 @@ export type InfoSquareProps = {
 export function InfoSquare({ title, icon, children }: InfoSquareProps) {
   return (
     <div
-      className="bg-white rounded-4xl height p-4 my-4"
+      className="bg-white rounded-4xl height p-4 flex flex-col"
     >
-      <h2 className="gap-2 flex flex-row items-center justify-start text-xl">
+      <h2 className="gap-2 flex flex-row items-center justify-start text-xl font-semibold">
         {icon}
         {title}
       </h2>
-      <div className="">
+      <div className="flex flex-col grow">
         {children}
       </div>
     </div>
