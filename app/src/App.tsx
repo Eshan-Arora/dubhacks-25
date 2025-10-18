@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import { ChatBox } from './components/ChatBox';
-import { InfoSquare } from './components/InfoSquare';
+import { InfoSquareRoot, InfoSquareHeading, InfoSquareContent } from './components/InfoSquare';
 import { Lights } from "./components/Lights";
 
 import './App.css'
@@ -36,19 +36,25 @@ function App() {
           </div>
 
           <div className="grid grid-cols-2 gap-4 my-4">
-            <InfoSquare
-              title="Lights"
-              icon={<LightbulbIcon className="text-gray-400" />}
-            >
-              <Lights />
-            </InfoSquare>
+            <InfoSquareRoot>
+              <InfoSquareHeading
+                title="Lights"
+                icon={<LightbulbIcon className="text-gray-400" />}
+              />
+              <InfoSquareContent>
+                <Lights />
+              </InfoSquareContent>
+            </InfoSquareRoot>
 
-            <InfoSquare
-              title="Sprinklers"
-              icon={<LightbulbIcon className="text-gray-400" />}
-            >
-              <Sprinklers />
-            </InfoSquare>
+            <InfoSquareRoot>
+              <InfoSquareHeading
+                title="Lights"
+                icon={<LightbulbIcon className="text-gray-400" />}
+              />
+              <InfoSquareContent>
+                <Sprinklers />
+              </InfoSquareContent>
+            </InfoSquareRoot>
           </div>
         </div>
       </div>
