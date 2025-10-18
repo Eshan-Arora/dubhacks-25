@@ -1,37 +1,23 @@
-import { useId, useLayoutEffect, useRef } from "react";
+import { useId } from "react";
 import { SendIcon } from "lucide-react";
+import clsx from "clsx";
 
 export type ChatBoxProps = {
   text: string;
   onChange: (newText: string) => void;
   placeholder: string;
+  className?: string;
 }
 
-export function ChatBox({ text, onChange, placeholder, }: ChatBoxProps) {
-  const textareaRef = useRef<HTMLTextAreaElement>(null);
-
-  const fitTextarea = () => {
-    const textarea = textareaRef.current;
-    if (textarea) {
-      textarea.style.height = "auto";
-      textarea.style.height = textarea.scrollHeight + "px";
-    }
-  };
-
-  useLayoutEffect(() => {
-    fitTextarea();
-  }, [text]);
-
+export function ChatBox({ text, onChange, placeholder, className }: ChatBoxProps) {
   // TODO: how to center the text
   return (
     <div
-      className="px-4 py-3 rounded-4xl bg-gray-100 focus:border-none focus:outline-none shadow-lg shadow-gray-200 h-min content-center justify-center flex flex-row w-2xl"
+      className={clsx("px-4 py-3 rounded-4xl bg-white focus:border-none focus:outline-none h-min content-center justify-center flex flex-row w-2xl gap-2", className)}
     >
-      <textarea
+      <input
         id={useId()}
-        ref={textareaRef}
         className="grow resize-none outline-none"
-        rows={1}
         value={text}
         onChange={e => onChange(e.target.value)}
         placeholder={placeholder}
