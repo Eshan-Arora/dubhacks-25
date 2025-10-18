@@ -1,13 +1,20 @@
 import { useState } from 'react'
+
+import { ChatBox } from './components/ChatBox';
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [chatText, setChatText] = useState("");
 
   return (
     <>
       <div id="root">
-        hey world
+        <ChatBox
+          text={chatText}
+          onChange={setChatText}
+          placeholder="What do you want to do?"
+        />
       </div>
     </>
   )
