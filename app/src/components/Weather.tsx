@@ -1,6 +1,9 @@
 import { useRef } from "react";
 import sunImage from "../assets/sun.png";
 
+const LAT = 47.6061;
+const LONG = 122.3328;
+
 export type WeatherProps = {
 };
 
