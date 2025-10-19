@@ -10,7 +10,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
 // Middleware to parse JSON
 app.use(express.json());
@@ -33,12 +33,13 @@ app.post("/input", async (req, res) => {
   }
 
   // Pass the input to the LLM for more complex processing
+  console.log("Gemini key:", process.env.GEMINI_API_KEY);
   try {
     const result = await model.generateContent(buildPrompt(input));
     const text = result.response.text();
     res.json({ response: text });
   } catch (err) {
-    console.error("Gemini API error:", err);
+    console.error("Gemini API error:", err.response?.data || err.message || err);
     res.status(500).json({ error: "Gemini query failed" });
   }
 });
