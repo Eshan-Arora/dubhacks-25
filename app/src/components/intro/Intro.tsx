@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowRightIcon } from "lucide-react";
 import { Button } from "../base/Button";
-import { MoonLoader } from "react-spinners";
+import { MoonLoader, PacmanLoader } from "react-spinners";
 
 function Stage0({
   onStart,
@@ -53,7 +53,7 @@ function Stage2() {
     <div className="flex flex-col gap-4 item-center bg-white rounded-2xl w-sm p-8">
       <div className="flex flex-col gap-8 items-center">
         <div className="flex items-center justify-center">
-          <MoonLoader />
+          <PacmanLoader color="oklch(87.9% 0.169 91.605)" />
         </div>
         <p className="text-center">Getting everything ready</p>
       </div>
