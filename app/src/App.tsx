@@ -4,9 +4,10 @@ import { ChatBox } from "./components/ChatBox";
 import { InfoSquareRoot, InfoSquareHeading, InfoSquareContent } from "./components/InfoSquare";
 import { Lights } from "./components/Lights";
 import { Weather } from "./components/Weather";
+import { Devices } from "./components/Devices";
 
 import './App.css'
-import { LightbulbIcon, CloudSunIcon, DropletIcon } from 'lucide-react';
+import { LightbulbIcon, CloudSunIcon, DropletIcon, ComputerIcon } from 'lucide-react';
 import { Sprinklers } from './components/Sprinklers';
 import { SleepScheduleInfoSquare } from './components/SleepSchedule';
 import { Intro, type SetupInfo } from './components/intro/Intro';
@@ -84,6 +85,16 @@ function Main({ info }: { info: SetupInfo }) {
             />
             <InfoSquareContent>
               <Sprinklers />
+            </InfoSquareContent>
+          </InfoSquareRoot>
+
+          <InfoSquareRoot className=" anim-delay2">
+            <InfoSquareHeading
+              title="Devices"
+              icon={<ComputerIcon className="text-gray-400" />}
+            />
+            <InfoSquareContent>
+              <Devices />
             </InfoSquareContent>
           </InfoSquareRoot>
         </div>
