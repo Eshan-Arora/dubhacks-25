@@ -94,9 +94,9 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
-      <div>
-        <pre>{loading ? "Loading..." : responseText}</pre>
+        <div>
+          <pre>{loading ? "Loading..." : responseText}</pre>
+        </div>
       </div>
     </>
   );
