@@ -15,7 +15,7 @@ export function ChatBox({ text, onChange, placeholder, className, onSubmit }: Ch
   return (
     <div
       className={clsx(
-        "px-4 py-3 rounded-4xl bg-white focus:border-none focus:outline-none h-min content-center justify-center flex flex-row w-2xl gap-2",
+        "px-4 py-3 rounded-4xl bg-white focus:border-none focus:outline-none h-min content-center justify-center flex flex-row w-2xl gap-2 focus-within:outline focus-within:outline-blue-300",
         className
       )}
     >
