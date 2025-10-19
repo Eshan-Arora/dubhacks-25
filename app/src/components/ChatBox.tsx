@@ -5,11 +5,12 @@ import clsx from "clsx";
 export type ChatBoxProps = {
   text: string;
   onChange: (newText: string) => void;
+  onSend?: () => void;
   placeholder: string;
   className?: string;
 }
 
-export function ChatBox({ text, onChange, placeholder, className }: ChatBoxProps) {
+export function ChatBox({ text, onChange, onSend, placeholder, className }: ChatBoxProps) {
   // TODO: how to center the text
   return (
     <div
@@ -23,7 +24,7 @@ export function ChatBox({ text, onChange, placeholder, className }: ChatBoxProps
         placeholder={placeholder}
       />
       <div className="flex flex-col justify-center content-center">
-        <button className="rounded-full text-white bg-black p-2 aspect-square">
+        <button onClick={onSend} className="rounded-full text-white bg-black p-2 aspect-square">
           <SendIcon height="1em" width="1em" />
         </button>
       </div>
