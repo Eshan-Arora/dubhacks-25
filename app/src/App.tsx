@@ -95,7 +95,9 @@ function App() {
           </div>
         </div>
         <div>
-          <pre>{loading ? "Loading..." : responseText}</pre>
+          <pre className="whitespace-pre-wrap break-words max-w-xl max-h-64 overflow-auto text-sm text-gray-800 bg-white p-3 rounded border border-gray-200">
+            {loading ? "Loading..." : responseText}
+          </pre>
         </div>
       </div>
     </>
