@@ -2,12 +2,13 @@ import clsx from "clsx";
 
 export type InfoSquareRootProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-export function InfoSquareRoot({ children }: InfoSquareRootProps) {
+export function InfoSquareRoot({ className, children }: InfoSquareRootProps) {
   return (
     <div
-      className={clsx("bg-white rounded-4xl height p-4 flex flex-col")}
+      className={clsx(className, "bg-white rounded-4xl height p-4 flex flex-col")}
     >
       {children}
     </div>
@@ -31,11 +32,12 @@ export function InfoSquareHeading({ title, icon, className }: InfoSquareHeadingP
 
 export type InfoSquareContentProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-export function InfoSquareContent({ children }: InfoSquareContentProps) {
+export function InfoSquareContent({ children, className }: InfoSquareContentProps) {
   return (
-    <div className="flex flex-col grow">
+    <div className={clsx("flex flex-col grow", className)}>
       {children}
     </div>
   );

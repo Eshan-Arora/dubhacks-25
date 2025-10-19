@@ -3,9 +3,10 @@ import { useState } from 'react'
 import { ChatBox } from './components/ChatBox';
 import { InfoSquareRoot, InfoSquareHeading, InfoSquareContent } from './components/InfoSquare';
 import { Lights } from "./components/Lights";
+import { Weather } from "./components/Weather";
 
 import './App.css'
-import { LightbulbIcon } from 'lucide-react';
+import { LightbulbIcon, CloudSunIcon, DropletIcon } from 'lucide-react';
 import { Sprinklers } from './components/Sprinklers';
 
 function App() {
@@ -48,11 +49,22 @@ function App() {
 
             <InfoSquareRoot>
               <InfoSquareHeading
-                title="Lights"
-                icon={<LightbulbIcon className="text-gray-400" />}
+                title="Sprinklers"
+                icon={<DropletIcon className="text-gray-400" />}
               />
               <InfoSquareContent>
                 <Sprinklers />
+              </InfoSquareContent>
+            </InfoSquareRoot>
+
+            <InfoSquareRoot className="relative overflow-hidden bg-linear-to-b! from-blue-200 to-blue-300">
+              <InfoSquareHeading
+                title="Weather"
+                icon={<CloudSunIcon className="text-white drop-shadow-md drop-shadow-gray-400" />}
+                className="text-white text-shadow-md"
+              />
+              <InfoSquareContent className="overflow-hidden">
+                <Weather />
               </InfoSquareContent>
             </InfoSquareRoot>
           </div>
