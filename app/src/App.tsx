@@ -1,11 +1,12 @@
 import { useState } from 'react'
 
 import { ChatBox } from './components/ChatBox';
-import { InfoSquare } from './components/InfoSquare';
+import { InfoSquareRoot, InfoSquareHeading, InfoSquareContent } from './components/InfoSquare';
 import { Lights } from "./components/Lights";
 
 import './App.css'
 import { LightbulbIcon } from 'lucide-react';
+import { Sprinklers } from './components/Sprinklers';
 
 function App() {
   const [chatText, setChatText] = useState("");
@@ -16,7 +17,7 @@ function App() {
         id="root"
         className="flex flex-col justify-center items-center bg-gray-100"
       >
-        <div className="w-5/6 md:w-5/10 md:min-w-xl p-5">
+        <div className="w-5/6 md:w-6/10 md:min-w-xl p-5">
           <div className="flex flex-row items-center">
             <div className="flex flex-col items-start w-2xs gap-1">
               <h2 className="leading-none text-2xl font-semibold">
@@ -34,12 +35,27 @@ function App() {
             />
           </div>
 
-          <InfoSquare
-            title="Lights"
-            icon={<LightbulbIcon className="text-gray-400" />}
-          >
-            <Lights />
-          </InfoSquare>
+          <div className="grid grid-cols-2 gap-4 my-4">
+            <InfoSquareRoot>
+              <InfoSquareHeading
+                title="Lights"
+                icon={<LightbulbIcon className="text-gray-400" />}
+              />
+              <InfoSquareContent>
+                <Lights />
+              </InfoSquareContent>
+            </InfoSquareRoot>
+
+            <InfoSquareRoot>
+              <InfoSquareHeading
+                title="Lights"
+                icon={<LightbulbIcon className="text-gray-400" />}
+              />
+              <InfoSquareContent>
+                <Sprinklers />
+              </InfoSquareContent>
+            </InfoSquareRoot>
+          </div>
         </div>
       </div>
     </>
