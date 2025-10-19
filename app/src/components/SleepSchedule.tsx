@@ -4,8 +4,8 @@ import { LucideBedDouble } from 'lucide-react';
 function SleepSchedule() {
   return (
     <div>
-      <p className="text-gray-200 text-left py-2">
-        Sleep scheduled in 5 hours. Lights will be automatically turned off.
+      <p className="text-purple-200 text-left py-2">
+        Bedtime in 5 hours. Lights will automatically turn off.
       </p>
     </div>
   );
@@ -16,8 +16,8 @@ export function SleepScheduleInfoSquare() {
     <InfoSquareRoot className="bg-linear-to-b! from-purple-700 to-purple-900">
       <InfoSquareHeading
         title="Sleep"
-        icon={<LucideBedDouble className="text-gray-200" />}
-        className="text-gray-100"
+        icon={<LucideBedDouble className="text-purple-300" />}
+        className="text-purple-200"
       />
       <InfoSquareContent>
         <SleepSchedule />
