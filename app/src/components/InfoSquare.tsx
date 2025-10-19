@@ -3,11 +3,13 @@ import clsx from "clsx";
 export type InfoSquareRootProps = {
   children: React.ReactNode;
   className?: string;
+  ref?: React.RefObject<HTMLDivElement | null>;
 };
 
-export function InfoSquareRoot({ className, children }: InfoSquareRootProps) {
+export function InfoSquareRoot({ ref, className, children }: InfoSquareRootProps) {
   return (
     <div
+      ref={ref}
       className={clsx(className, "bg-white rounded-4xl height p-4 flex flex-col")}
     >
       {children}
