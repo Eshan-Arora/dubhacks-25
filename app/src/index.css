@@ -51,6 +51,43 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+.popin {
+  animation: popIn 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.anim-delay1 {
+  animation-delay: 0ms;
+}
+
+.anim-delay2 {
+  animation-delay: 50ms;
+}
+
+.anim-delay3 {
+  animation-delay: 100ms;
+}
+
+.anim-delay4 {
+  animation-delay: 150ms;
+}
+
+.anim-delay5 {
+  animation-delay: 200ms;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.75);
+    filter: blur(12px);
+    opacity: 0.75;
+  }
+  to {
+    transform: scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
 @keyframes introReveal {
   from {
     opacity: 0.5;

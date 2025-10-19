@@ -86,7 +86,7 @@ export function Intro({
 
         setTimeout(() => {
           onSetup(info);
-        }, 5_000);
+        }, 3_000);
       }}
     />
   } else if (stage === 2) {

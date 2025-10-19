@@ -5,7 +5,7 @@ function SleepSchedule() {
   return (
     <div>
       <p className="text-purple-200 text-left py-2">
-        Bedtime in 5 hours. Lights will automatically turn off.
+        Bedtime in 13 hours. Lights will automatically turn off.
       </p>
     </div>
   );

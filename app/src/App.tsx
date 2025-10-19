@@ -44,7 +44,7 @@ function Main({ info }: { info: SetupInfo }) {
 
 
   return (
-    <div className="w-5/6 md:w-6/10 md:min-w-xl p-5">
+    <div className="w-5/6 md:w-6/10 md:min-w-xl p-5 popin">
       <div className="flex flex-row items-center">
         <div className="flex flex-col items-start w-2xs gap-1">
           <h2 className="leading-none text-2xl font-semibold">
@@ -66,7 +66,7 @@ function Main({ info }: { info: SetupInfo }) {
       <div className="grid grid-cols-2 gap-4 my-4">
         {/* Col 1 */}
         <div className="flex flex-col gap-4">
-          <InfoSquareRoot className="relative overflow-hidden bg-linear-to-b! from-blue-200 to-blue-300">
+          <InfoSquareRoot className="relative overflow-hidden bg-linear-to-b! from-blue-200 to-blue-300  anim-delay1">
             <InfoSquareHeading
               title="Weather"
               icon={<CloudSunIcon className="text-white drop-shadow-md drop-shadow-gray-400" />}
@@ -77,7 +77,7 @@ function Main({ info }: { info: SetupInfo }) {
             </InfoSquareContent>
           </InfoSquareRoot>
 
-          <InfoSquareRoot>
+          <InfoSquareRoot className=" anim-delay3">
             <InfoSquareHeading
               title="Sprinklers"
               icon={<DropletIcon className="text-gray-400" />}
@@ -90,7 +90,7 @@ function Main({ info }: { info: SetupInfo }) {
 
         {/* Col 2 */}
         <div className="flex flex-col gap-4">
-          <InfoSquareRoot>
+          <InfoSquareRoot className=" anim-delay2">
             <InfoSquareHeading
               title="Lights"
               icon={<LightbulbIcon className="text-gray-400" />}

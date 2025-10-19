@@ -11,7 +11,7 @@ export function Lights() {
       <SwitchItem name="Bedroom 1" icon={<BedIcon className="text-gray-400" />} />
       <SwitchItem name="Bedroom 2" icon={<BedIcon className="text-gray-400" />} />
       <SwitchItem name="Living room" icon={<ArmchairIcon className="text-gray-400" />} />
-      <SwitchItem name="Deck" icon={<ToiletIcon className="text-gray-400" />} />
+      <SwitchItem name="Bathroom" icon={<ToiletIcon className="text-gray-400" />} />
     </SwitchList>
   );
 }

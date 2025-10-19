@@ -6,8 +6,8 @@ export type ChatBoxProps = {
   text: string;
   onChange: (newText: string) => void;
   placeholder: string;
+  onSubmit: () => void;
   className?: string;
-  onSubmit?: () => void;
 };
 
 export function ChatBox({ text, onChange, placeholder, className, onSubmit }: ChatBoxProps) {
@@ -24,6 +24,11 @@ export function ChatBox({ text, onChange, placeholder, className, onSubmit }: Ch
         className="grow resize-none outline-none"
         value={text}
         onChange={(e) => onChange(e.target.value)}
+        onKeyDown={((e) => {
+          if (e.key === "Enter") {
+            onSubmit();
+          }
+        })}
         placeholder={placeholder}
       />
       <div className="flex flex-col justify-center content-center">
