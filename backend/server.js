@@ -1,12 +1,12 @@
-const express = require("express");
-const { Gpio } = require("onoff");
+import express from "express";
+import gpio from "onoff";
 //const { playRaveMusic } = require('./spotify');
-const { handleLLM } = require("./llm");
-const { turnOnLights, turnOffLights } = require("./gpio");
+import { turnOnLights } from "./gpio.js";
 const app = express();
 const port = 3001;
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { buildPrompt } from "./systemPrompt";
+import { buildPrompt } from "./systemPrompt.js";
+import dotenv from "dotenv";
 
 dotenv.config();
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
