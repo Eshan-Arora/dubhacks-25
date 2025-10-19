@@ -10,10 +10,9 @@ export type ChatBoxProps = {
 }
 
 export function ChatBox({ text, onChange, placeholder, className }: ChatBoxProps) {
-  // TODO: how to center the text
   return (
     <div
-      className={clsx("px-4 py-3 rounded-4xl bg-white focus:border-none focus:outline-none h-min content-center justify-center flex flex-row w-2xl gap-2", className)}
+      className={clsx("px-4 py-3 rounded-4xl bg-white focus:border-none focus:outline-none h-min content-center justify-center flex flex-row w-2xl gap-2 focus-within:outline-blue-400 focus-within:outline", className)}
     >
       <input
         id={useId()}

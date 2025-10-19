@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 
 import { ChatBox } from './components/ChatBox';
 import { InfoSquareRoot, InfoSquareHeading, InfoSquareContent } from './components/InfoSquare';
@@ -8,6 +8,7 @@ import { Weather } from "./components/Weather";
 import './App.css'
 import { LightbulbIcon, CloudSunIcon, DropletIcon } from 'lucide-react';
 import { Sprinklers } from './components/Sprinklers';
+import { SleepScheduleInfoSquare } from './components/SleepSchedule';
 
 function App() {
   const [chatText, setChatText] = useState("");
@@ -72,6 +73,8 @@ function App() {
                   <Lights />
                 </InfoSquareContent>
               </InfoSquareRoot>
+
+              <SleepScheduleInfoSquare />
             </div>
           </div>
         </div>
