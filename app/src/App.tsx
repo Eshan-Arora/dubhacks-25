@@ -3,10 +3,12 @@ import { useState } from "react";
 import { ChatBox } from "./components/ChatBox";
 import { InfoSquareRoot, InfoSquareHeading, InfoSquareContent } from "./components/InfoSquare";
 import { Lights } from "./components/Lights";
+import { Weather } from "./components/Weather";
 
 import "./App.css";
-import { LightbulbIcon } from "lucide-react";
+import { LightbulbIcon, CloudSunIcon, DropletIcon } from "lucide-react";
 import { Sprinklers } from "./components/Sprinklers";
+import { SleepScheduleInfoSquare } from "./components/SleepSchedule";
 
 function App() {
   const [chatText, setChatText] = useState("");
@@ -58,19 +60,38 @@ function App() {
           </div>
 
           <div className="grid grid-cols-2 gap-4 my-4">
-            <InfoSquareRoot>
-              <InfoSquareHeading title="Lights" icon={<LightbulbIcon className="text-gray-400" />} />
-              <InfoSquareContent>
-                <Lights />
-              </InfoSquareContent>
-            </InfoSquareRoot>
+            {/* Col 1 */}
+            <div className="flex flex-col gap-4">
+              <InfoSquareRoot className="relative overflow-hidden bg-linear-to-b! from-blue-200 to-blue-300">
+                <InfoSquareHeading
+                  title="Weather"
+                  icon={<CloudSunIcon className="text-white drop-shadow-md drop-shadow-gray-400" />}
+                  className="text-white text-shadow-md"
+                />
+                <InfoSquareContent className="overflow-hidden">
+                  <Weather />
+                </InfoSquareContent>
+              </InfoSquareRoot>
 
-            <InfoSquareRoot>
-              <InfoSquareHeading title="Lights" icon={<LightbulbIcon className="text-gray-400" />} />
-              <InfoSquareContent>
-                <Sprinklers />
-              </InfoSquareContent>
-            </InfoSquareRoot>
+              <InfoSquareRoot>
+                <InfoSquareHeading title="Sprinklers" icon={<DropletIcon className="text-gray-400" />} />
+                <InfoSquareContent>
+                  <Sprinklers />
+                </InfoSquareContent>
+              </InfoSquareRoot>
+            </div>
+
+            {/* Col 2 */}
+            <div className="flex flex-col gap-4">
+              <InfoSquareRoot>
+                <InfoSquareHeading title="Lights" icon={<LightbulbIcon className="text-gray-400" />} />
+                <InfoSquareContent>
+                  <Lights />
+                </InfoSquareContent>
+              </InfoSquareRoot>
+
+              <SleepScheduleInfoSquare />
+            </div>
           </div>
         </div>
       </div>
