@@ -9,3 +9,6 @@ We created various mini circuits to replicate real-world home electronics and di
 
 ## What's next for HomeHive
 Support for more smart devices, integration with products that people use every day.
+
+## To run the app
+Make sure to add your Gemini API key to a local .env file
